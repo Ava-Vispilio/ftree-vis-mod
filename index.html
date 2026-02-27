@@ -11,16 +11,22 @@
 <div class="control">
     <form>
         <ul>
-            <li><span class="f">Tree Depth</span> <input type="text" name="depth" value="3"/></li>
-            <li><span class="f">Ports per Switch</span> <input type="text" name="width" value="16"/></li>
-            <li><span class="f">Hosts</span> <span id="nhost"></span></li>
-            <li><span class="f">Switches</span> <span id="nswitch"></span></li>
-            <li><span class="f">Cables</span> <span id="ncable"></span></li>
-            <li><span class="f">Transmitters</span> <span id="ntx"></span></li>
-            <li><span class="f">Switch Tx's</span> <span id="nswtx"></span></li>
+            <li><span class="f">Mode</span> <select name="mode" id="mode-select">
+                <option value="fat-tree">Fat-tree</option>
+                <option value="jupiter">Jupiter</option>
+                <option value="dgx">DGX SuperPOD</option>
+            </select></li>
+            <li class="fixed-mode-note" style="display:none;"><span class="f"></span><span class="fixed-note-text">Fixed topology (see report for parameters).</span></li>
+            <li class="fat-tree-only"><span class="f">Tree Depth</span> <input type="text" name="depth" value="3"/></li>
+            <li class="fat-tree-only"><span class="f">Ports per Switch</span> <input type="text" name="width" value="16"/></li>
+            <li class="fat-tree-only"><span class="f">Hosts</span> <span id="nhost"></span></li>
+            <li class="fat-tree-only"><span class="f">Switches</span> <span id="nswitch"></span></li>
+            <li class="fat-tree-only"><span class="f">Cables</span> <span id="ncable"></span></li>
+            <li class="fat-tree-only"><span class="f">Transmitters</span> <span id="ntx"></span></li>
+            <li class="fat-tree-only"><span class="f">Switch Tx's</span> <span id="nswtx"></span></li>
         </ul>
     </form>
-    <div class="comment">Fat Tree Visualizer <br/> by <a href="http://cseweb.ucsd.edu/~h8liu">He "Lonnie" Liu</a></div>
+    <div class="comment">Fat Tree Visualizer <br/> by He Liu, modified by Ava Vispilio</div>
 </div>
 
 <script language="javascript" type="text/javascript" src="lib/jquery.js"></script>
